@@ -8,6 +8,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="index.css">
+        <script src="myScript.js"></script>
     </head>
     
     <body>
@@ -26,9 +27,9 @@
                 
                 <table class="table table-striped table-bordered some_style table-condensed">
                     <tr>
-                        <th>Previous</th>
-                        <th colspan="5" class="center">2016 June</th>
-                        <th>Next</th>
+                        <th><button type="button" onclick="changeDate(-1)" class="btn">Previous</button></th>
+                        <th colspan="5" class="center" id="date">2017 8</th>
+                        <th><button type="button" onclick="changeDate(1)" class="btn">Next</button></th>
                     </tr>
                     <tr>
                         <th>Monday</th>
@@ -40,309 +41,183 @@
                         <th>Sunday</th>
                     </tr>
                     <tr> 
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="1">
+                            <div class="center cell" id="d1"></div>
+                            <div class="center cell" id="x1"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="2">
+                            <div class="center cell" id="d2"></div>
+                            <div class="center cell" id="x2"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="3">
+                            <div class="center cell" id="d3"></div>
+                            <div class="center cell" id="x3"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="4">
+                            <div class="center cell" id="d4"></div>
+                            <div class="center cell" id="x4"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="5">
+                            <div class="center cell" id="d5"></div>
+                            <div class="center cell" id="x5"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="6">
+                            <div class="center cell" id="d6"></div>
+                            <div class="center cell" id="x6"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="7">
+                            <div class="center cell" id="d7"></div>
+                            <div class="center cell" id="x7"></div>
                         </th>
                     </tr>
                     <tr>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="8">
+                            <div class="center cell" id="d8"></div>
+                            <div class="center cell" id="x8"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="9">
+                            <div class="center cell" id="d9"></div>
+                            <div class="center cell" id="x9"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="10">
+                            <div class="center cell" id="d10"></div>
+                            <div class="center cell" id="x10"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="11">
+                            <div class="center cell" id="d11"></div>
+                            <div class="center cell" id="x11"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="12">
+                            <div class="center cell" id="d12"></div>
+                            <div class="center cell" id="x12"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="13">
+                            <div class="center cell" id="d13"></div>
+                            <div class="center cell" id="x13"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="14">
+                            <div class="center cell" id="d14"></div>
+                            <div class="center cell" id="x14"></div>
                         </th>
                     </tr>
                     <tr>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="15">
+                            <div class="center cell" id="d15"></div>
+                            <div class="center cell" id="x15"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="16">
+                            <div class="center cell" id="d16"></div>
+                            <div class="center cell" id="x16"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="17">
+                            <div class="center cell" id="d17"></div>
+                            <div class="center cell" id="x17"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="18">
+                            <div class="center cell" id="d18"></div>
+                            <div class="center cell" id="x18"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="19">
+                            <div class="center cell" id="d19"></div>
+                            <div class="center cell" id="x19"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="20">
+                            <div class="center cell" id="d20"></div>
+                            <div class="center cell" id="x20"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="21">
+                            <div class="center cell" id="d21"></div>
+                            <div class="center cell" id="x21"></div>
                         </th>
                     </tr>
                     <tr>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="22">
+                            <div class="center cell" id="d22"></div>
+                            <div class="center cell" id="x22"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="23">
+                            <div class="center cell" id="d23"></div>
+                            <div class="center cell" id="x23"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="24">
+                            <div class="center cell" id="d24"></div>
+                            <div class="center cell" id="x24"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="25">
+                            <div class="center cell" id="d25"></div>
+                            <div class="center cell" id="x25"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="26">
+                            <div class="center cell" id="d26"></div>
+                            <div class="center cell" id="x26"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="27">
+                            <div class="center cell" id="d27"></div>
+                            <div class="center cell" id="x27"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="28">
+                            <div class="center cell" id="d28"></div>
+                            <div class="center cell" id="x28"></div>
                         </th>
                     </tr>
                     <tr>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="29">
+                            <div class="center cell" id="d29"></div>
+                            <div class="center cell" id="x29"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="30">
+                            <div class="center cell" id="d30"></div>
+                            <div class="center cell" id="x30"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="31">
+                            <div class="center cell" id="d31"></div>
+                            <div class="center cell" id="x31"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="32">
+                            <div class="center cell" id="d32"></div>
+                            <div class="center cell" id="x32"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="33">
+                            <div class="center cell" id="d33"></div>
+                            <div class="center cell" id="x33"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="34">
+                            <div class="center cell" id="d34"></div>
+                            <div class="center cell" id="x34"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="35">
+                            <div class="center cell" id="d35"></div>
+                            <div class="center cell" id="x35"></div>
                         </th>
                     </tr>
                     <tr>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="36">
+                            <div class="center cell" id="d36"></div>
+                            <div class="center cell" id="x36"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="37">
+                            <div class="center cell" id="d37"></div>
+                            <div class="center cell" id="x37"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="38">
+                            <div class="center cell" id="d38"></div>
+                            <div class="center cell" id="x38"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="39">
+                            <div class="center cell" id="d39"></div>
+                            <div class="center cell" id="x39"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="40">
+                            <div class="center cell" id="d40"></div>
+                            <div class="center cell" id="x40"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="41">
+                            <div class="center cell" id="d41"></div>
+                            <div class="center cell" id="x41"></div>
                         </th>
-                        <th>
-                            <div class="center cell">12</div>
-                            <div class="center cell">
-                                <a href="task_view.html">task-list view</a>
-                            </div>
-                            <div class="center cell">Extra min: 400</div>
+                        <th id="42">
+                            <div class="center cell" id="d42"></div>
+                            <div class="center cell" id="x42"></div>
                         </th>
                     </tr>
                 </table>
