@@ -32,3 +32,31 @@ function daysInMonth(anyDateInMonth) {
 $(document).ready(function(){
     changeDate(0);
 });
+
+ /*function activate(){
+    var jsonData = { "year": 2016, "month": 10, "day": 4, "requiredHours": 8 };
+    var myJSON = JSON.stringify(jsonData);
+
+    $.ajax({
+        url: "http://localhost:8080/timelogger/workmonths/workdays",
+        type: "POST",
+        crossDomain: true,
+        contentType: "application/json",
+        data: myJSON,
+        dataType: "json",
+        success: function(response) {
+            $("#btn1").text("succes");  
+        }
+    });
+ }*/
+
+ function activate(){
+    $("#btn1").text("activated"); 
+    $.ajax({
+        url: 'http://localhost:8080/timelogger/workmonths/deleteall',
+        type: 'PUT',
+        success: function(response) {
+            $("#btn1").text("succes");  
+        }
+    });
+ }
