@@ -1,6 +1,5 @@
 var d = new Date();
 
-
 function changeDate(value) {
     for(i = 1; i < 43; i++){  
         $("#" + "d" + i).text("");   
@@ -33,30 +32,69 @@ $(document).ready(function(){
     changeDate(0);
 });
 
- /*function activate(){
-    var jsonData = { "year": 2016, "month": 10, "day": 4, "requiredHours": 8 };
+$(document).ready(function(){
+    $("#" + 4).click(function() {
+        $("#" + 4).text("fut");
+    });
+
+
+    for(i = 1; i < 43; i++){ 
+        $("#" + i).click(function() {
+            $("#" + i).css("background-color", "yellow");
+            document.getElementById("usr").value = i;
+            $("#x" + i).text("Extra hours: ");
+        });
+    }
+});
+
+ function activate(){
+    var year = d.getFullYear();
+    var month = d.getMonth() + 1;
+    var day = $('#usr').val();
+    var hours = $('#usr2').val();
+
+    var jsonData = { "year": year, "month": month, "day": Number(day), "requiredHours": 60*Number(hours) };
     var myJSON = JSON.stringify(jsonData);
 
     $.ajax({
         url: "http://localhost:8080/timelogger/workmonths/workdays",
         type: "POST",
-        crossDomain: true,
         contentType: "application/json",
+        crossDomain: true,
         data: myJSON,
         dataType: "json",
         success: function(response) {
             $("#btn1").text("succes");  
         }
     });
- }*/
+    
+    updateStats();
+ }
 
- function activate(){
-    $("#btn1").text("activated"); 
+ function endHours(index){
+    $("#" + i).text("Extra hours: ");
+ }
+
+ function updateStats(){
+    var year = d.getFullYear();
+    var month = d.getMonth() + 1;
+    var day = $('#usr').val();
+    var hours = $('#usr2').val();
+
+    var jsonData = { "year": year, "month": month, "day": Number(day), "requiredHours": 60*Number(hours) };
+    var myJSON = JSON.stringify(jsonData);
+
     $.ajax({
-        url: 'http://localhost:8080/timelogger/workmonths/deleteall',
-        type: 'PUT',
+        url: "http://localhost:8080/timelogger/workmonths/updateStatistics",
+        type: "POST",
+        crossDomain: true,
+        contentType: "application/json",
+        dataType: "json",
+        data: myJSON,
         success: function(response) {
-            $("#btn1").text("succes");  
+            $("#s1").text("succes");  
+            $("#s2").text("succes");
         }
     });
  }
+
