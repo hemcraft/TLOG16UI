@@ -1,0 +1,58 @@
+body {
+    background-color: lightblue;
+}
+
+.stat_size {
+    font-size: 20px;
+}
+
+.center {
+    text-align: center;
+    color: red;
+}
+
+.cell {
+    font-size: 15px;
+    color: orange;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    font-size: 14px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 14px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+.input {
+    font-size: 20px;
+    width: 200px;
+}
+
+.input2 {
+    font-size: 20px;
+    width: 80px;
+}
+
+.activate {
+    text-align: center;
+}
+
